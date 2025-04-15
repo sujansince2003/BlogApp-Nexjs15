@@ -1,5 +1,6 @@
 import { handleFormSubmission } from "@/app/action";
-import { Button } from "@/components/ui/button";
+import { SubmitButton } from "@/app/mycomponents";
+
 import {
   Card,
   CardTitle,
@@ -46,7 +47,7 @@ const Page = () => {
                 type="url"
               />
             </div>
-            <Button className="bg-blue-500">Post Blog</Button>
+            <SubmitButton />
           </form>
         </CardContent>
       </Card>
