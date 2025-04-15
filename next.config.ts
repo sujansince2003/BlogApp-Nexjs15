@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
         hostname: "i.postimg.cc",
         protocol: "https",
         port: ""
+      },
+      {
+        hostname: "lh3.googleusercontent.com",
+        protocol: "https",
+        port: ""
       }
     ]
   }
