@@ -19,13 +19,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import type { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
 
-interface NavbarProps {
-  user: KindeUser | null;
-}
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
-const Navbar = ({ user }: NavbarProps) => {
+const Navbar = () => {
+  const { getUser } = useKindeBrowserClient();
+  const user = getUser();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
